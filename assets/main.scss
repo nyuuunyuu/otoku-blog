@@ -183,3 +183,20 @@ a:hover {
 .post-title {
   font-size: 1.8rem;
 }
+
+.ad-slot {
+  margin: 28px 0;
+  padding: 14px;
+  text-align: center;
+  background: var(--bg-elevated);
+  border: 1px dashed var(--border);
+  border-radius: 4px;
+}
+
+.ad-slot:empty::before,
+.ad-slot:has(> :only-child:empty)::before {
+  content: "広告";
+  font-size: 0.7rem;
+  color: var(--fg-muted);
+  letter-spacing: 0.1em;
+}
